@@ -14,11 +14,12 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dotnet-gtk-sharp-devel >= 0.98
 BuildRequires:	gtksourceview-devel
-BuildRequires:	libgsf-gnome-devel
+BuildRequires:	libgsf-gnome-devel >= 1.11.0
 BuildRequires:	mono-csharp >= 0.96
 BuildRequires:	pkgconfig
 Requires:	dotnet-gtk-sharp >= 0.98
 Requires:	gtksourceview
+Requires:	libgsf-gnome >= 1.11.0
 ExcludeArch:	alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
