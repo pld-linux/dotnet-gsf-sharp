@@ -1,6 +1,6 @@
 %define		snap 20050113
 Summary:	Gsf# - libgsf .NET Binding
-Summary(pl):	Gsf# - wi您anie Gsf# dla libgsf
+Summary(pl):	Gsf# - wi您anie .NET dla libgsf
 Name:		dotnet-gsf-sharp
 Version:	0.2
 Release:	0.1
@@ -9,23 +9,23 @@ License:	LGPL
 Group:		Libraries
 Source0:	gsf-sharp-%{version}-%{snap}.tar.gz
 # Source0-md5:	5d7f10536541a18cfeb7b4444d57af86
-URL:		http://www.gnome.org
+URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dotnet-gtk-sharp-devel >= 0.98
+BuildRequires:	gtksourceview-devel
 BuildRequires:	mono-csharp >= 0.96
 BuildRequires:	pkgconfig
-BuildRequires:	gtksourceview-devel
 Requires:	dotnet-gtk-sharp >= 0.98
 Requires:	gtksourceview
 ExcludeArch:	alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Gsf# - libgsf .NET Binding
+Gsf# - libgsf .NET Binding.
 
 %description -l pl
-Gsf# - wi您anie Gsf# dla libgsf
+Gsf# - wi您anie .NET dla libgsf.
 
 %package devel
 Summary:	Gsf# development files
@@ -34,7 +34,7 @@ Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
-Gsf# development files
+Gsf# development files.
 
 %description devel -l pl
 Pliki programistyczne Gsf#.
@@ -65,6 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_pkgconfigdir}/*
 %{_libdir}/mono/gtk-sharp/gsf-sharp.dll
 %{_datadir}/gapi/gsf-api.xml
+%{_pkgconfigdir}/*
