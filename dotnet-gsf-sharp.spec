@@ -12,15 +12,17 @@ Source0:	gsf-sharp-%{version}-%{snap}.tar.gz
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
+# just gtk-sharp
 BuildRequires:	dotnet-gtk-sharp-devel >= 0.98
 BuildRequires:	gtksourceview-devel
 BuildRequires:	libgsf-gnome-devel >= 1.11.0
-BuildRequires:	mono-csharp >= 0.96
+BuildRequires:	mono-csharp >= 1.0
+BuildRequires:	monodoc >= 1.0
 BuildRequires:	pkgconfig
 Requires:	dotnet-gtk-sharp >= 0.98
 Requires:	gtksourceview
 Requires:	libgsf-gnome >= 1.11.0
-ExcludeArch:	alpha
+Requires:	mono >= 1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,6 +36,7 @@ Summary:	Gsf# development files
 Summary(pl):	Pliki programistyczne Gsf#
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
+Requires:	dotnet-gtk-sharp-devel >= 0.98
 
 %description devel
 Gsf# development files.
