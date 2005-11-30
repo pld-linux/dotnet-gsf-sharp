@@ -4,7 +4,7 @@ Summary:	Gsf# - libgsf .NET Binding
 Summary(pl):	Gsf# - wi±zanie .NET dla libgsf
 Name:		dotnet-gsf-sharp
 Version:	0.7
-Release:	1
+Release:	0.%{snap}.1
 Epoch:		0
 License:	LGPL
 Group:		Libraries
