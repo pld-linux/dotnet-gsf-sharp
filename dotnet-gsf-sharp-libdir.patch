@@ -1,0 +1,12 @@
+diff -aurN gsf-sharp-0.7.orig/configure.in gsf-sharp-0.7/configure.in
+--- gsf-sharp-0.7.orig/configure.in	2005-11-30 19:00:00.000000000 +0100
++++ gsf-sharp-0.7/configure.in	2005-11-30 20:10:41.000000000 +0100
+@@ -36,7 +36,7 @@
+ 	AC_MSG_ERROR([No gacutil tool found])
+ fi
+ 
+-GACUTIL_FLAGS='/package gtk-sharp /gacdir $(prefix)/lib /root $(DESTDIR)$(prefix)/lib'
++GACUTIL_FLAGS='/package gtk-sharp /gacdir $(prefix)/lib /root $(DESTDIR)$(libdir)'
+                                      
+ AC_SUBST(RUNTIME)
+ AC_SUBST(CSC)
