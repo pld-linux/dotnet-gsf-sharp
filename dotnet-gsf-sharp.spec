@@ -80,12 +80,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/mono/gac/gsf-sharp
+%{_prefix}/lib/mono/gac/gsf-sharp
 
 %files devel
 %defattr(644,root,root,755)
 %{_libdir}/*.la
-%{_libdir}/mono/gtk-sharp/gsf-sharp.dll
+%{_prefix}/lib/mono/gtk-sharp/gsf-sharp.dll
 %{_datadir}/gapi-2.0/gsf-api.xml
 %{_pkgconfigdir}/*
 
