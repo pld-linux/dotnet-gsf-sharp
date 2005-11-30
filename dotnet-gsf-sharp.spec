@@ -1,28 +1,25 @@
-%define		snap 20050113
+%include	/usr/lib/rpm/macros.mono
+%define		snap 20051130
 Summary:	Gsf# - libgsf .NET Binding
 Summary(pl):	Gsf# - wi±zanie .NET dla libgsf
 Name:		dotnet-gsf-sharp
-Version:	0.2
-Release:	2
+Version:	0.7
+Release:	1
 Epoch:		0
 License:	LGPL
 Group:		Libraries
-Source0:	gsf-sharp-%{version}-%{snap}.tar.gz
-# Source0-md5:	5d7f10536541a18cfeb7b4444d57af86
+Source0:	gsf-sharp-%{version}-%{snap}.tar.bz2
+# Source0-md5:	afb75dd835afea2f014d91ae73344fd7
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-# just gtk-sharp
 BuildRequires:	dotnet-gtk-sharp-devel >= 0.98
-BuildRequires:	gtksourceview-devel
-BuildRequires:	libgsf-gnome-devel >= 1.11.0
+BuildRequires:	libgsf-gnome-devel >= 1.13.2
+BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.0
 BuildRequires:	monodoc >= 1.0
 BuildRequires:	pkgconfig
-Requires:	dotnet-gtk-sharp >= 0.98
-Requires:	gtksourceview
-Requires:	libgsf-gnome >= 1.11.0
-Requires:	mono >= 1.0
+ExcludeArch:	alpha i386 sparc sparc64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,10 +41,23 @@ Gsf# development files.
 %description devel -l pl
 Pliki programistyczne Gsf#.
 
+%package static
+Summary:	Gsf# static library
+Summary(pl):	Biblioteka statyczna Gsf#
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
+
+%description static
+Gsf# static library.
+
+%description static -l pl
+Biblioteka statyczna Gsf#.
+
 %prep
 %setup -q -n gsf-sharp-%{version}
 
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
@@ -63,13 +73,22 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
+%attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/mono/gac/gsf-sharp
 
 %files devel
 %defattr(644,root,root,755)
+%{_libdir}/*.la
 %{_libdir}/mono/gtk-sharp/gsf-sharp.dll
-%{_datadir}/gapi/gsf-api.xml
+%{_datadir}/gapi-2.0/gsf-api.xml
 %{_pkgconfigdir}/*
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/*.a
