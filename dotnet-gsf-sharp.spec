@@ -10,6 +10,7 @@ License:	LGPL
 Group:		Libraries
 Source0:	gsf-sharp-%{version}-%{snap}.tar.bz2
 # Source0-md5:	afb75dd835afea2f014d91ae73344fd7
+Patch0:		%{name}-libdir.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -55,6 +56,7 @@ Biblioteka statyczna Gsf#.
 
 %prep
 %setup -q -n gsf-sharp-%{version}
+%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -80,12 +82,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_libdir}/lib*.so
-%{_prefix}/lib/mono/gac/gsf-sharp
+%{_libdir}/mono/gac/gsf-sharp
 
 %files devel
 %defattr(644,root,root,755)
 %{_libdir}/*.la
-%{_prefix}/lib/mono/gtk-sharp/gsf-sharp.dll
+%{_libdir}/mono/gtk-sharp/gsf-sharp.dll
 %{_datadir}/gapi-2.0/gsf-api.xml
 %{_pkgconfigdir}/*
 
