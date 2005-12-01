@@ -1,0 +1,11 @@
+diff -aurN gsf-sharp-0.7.orig/gsf-sharp.pc.in gsf-sharp-0.7/gsf-sharp.pc.in
+--- gsf-sharp-0.7.orig/gsf-sharp.pc.in	2005-11-30 19:00:00.000000000 +0100
++++ gsf-sharp-0.7/gsf-sharp.pc.in	2005-12-01 20:21:27.000000000 +0100
+@@ -1,6 +1,6 @@
+ prefix=@prefix@
+ exec_prefix=${prefix}
+-libdir=@libdir@
++libdir=${exec_prefix}/lib
+ 
+ 
+ Name: Gsf#
