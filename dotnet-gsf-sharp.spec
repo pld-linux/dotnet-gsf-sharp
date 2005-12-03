@@ -17,9 +17,10 @@ BuildRequires:	automake
 BuildRequires:	dotnet-gtk-sharp-devel >= 0.98
 BuildRequires:	libgsf-gnome-devel >= 1.13.2
 BuildRequires:	libtool
-BuildRequires:	mono-csharp >= 1.0
+BuildRequires:	mono-csharp >= 1.1.7
 BuildRequires:	monodoc >= 1.0
 BuildRequires:	pkgconfig
+Requires:	mono >= 1.1.7
 ExcludeArch:	alpha i386 sparc sparc64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
