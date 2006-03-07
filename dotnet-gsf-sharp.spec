@@ -4,7 +4,7 @@ Summary:	Gsf# - libgsf .NET Binding
 Summary(pl):	Gsf# - wi±zanie .NET dla libgsf
 Name:		dotnet-gsf-sharp
 Version:	0.7
-Release:	0.%{snap}.3
+Release:	0.%{snap}.4
 Epoch:		0
 License:	LGPL
 Group:		Libraries
@@ -14,7 +14,7 @@ Patch0:		%{name}-pkgconfig.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	dotnet-gtk-sharp-devel >= 0.98
+BuildRequires:	dotnet-gtk-sharp2-devel >= 2.3.90
 BuildRequires:	libgsf-gnome-devel >= 1.13.2
 BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.1.7
@@ -35,7 +35,7 @@ Summary:	Gsf# development files
 Summary(pl):	Pliki programistyczne Gsf#
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
-Requires:	dotnet-gtk-sharp-devel >= 0.98
+Requires:	dotnet-gtk-sharp2-devel >= 2.3.90
 
 %description devel
 Gsf# development files.
