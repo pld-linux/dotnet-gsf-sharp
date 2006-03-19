@@ -6,7 +6,7 @@ diff -aurN gsf-sharp-0.7.orig/configure.in gsf-sharp-0.7/configure.in
  AC_SUBST(GTK_SHARP_LIBS)
  
 -PKG_CHECK_MODULES(GSF, libgsf-1 >= 1.13 libgsf-1 < 1.14 libgsf-gnome-1 >= 1.13 libgsf-gnome-1 < 1.14)
-+PKG_CHECK_MODULES(GSF, libgsf-1 >= 1.13 libgsf-1 < 1.14 libgsf-gnome-1 >= 1.13)
++PKG_CHECK_MODULES(GSF, libgsf-1 >= 1.13 libgsf-gnome-1 >= 1.13)
  AC_SUBST(GSF_CFLAGS)
  AC_SUBST(GSF_LIBS)
  gsf_prefix=`pkg-config --variable=prefix libgsf-1`
