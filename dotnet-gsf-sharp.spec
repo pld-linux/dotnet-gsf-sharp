@@ -11,6 +11,7 @@ Group:		Libraries
 Source0:	gsf-sharp-%{version}-%{snap}.tar.bz2
 # Source0-md5:	afb75dd835afea2f014d91ae73344fd7
 Patch0:		%{name}-pkgconfig.patch
+Patch1:		%{name}-version_check.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -58,6 +59,7 @@ Biblioteka statyczna Gsf#.
 %prep
 %setup -q -n gsf-sharp-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
