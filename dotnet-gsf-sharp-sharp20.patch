@@ -1,0 +1,30 @@
+diff -aurN gsf-sharp-0.7.orig/configure.in gsf-sharp-0.7/configure.in
+--- gsf-sharp-0.7.orig/configure.in	2005-11-30 19:00:00.000000000 +0100
++++ gsf-sharp-0.7/configure.in	2006-06-27 20:15:26.006203752 +0200
+@@ -36,7 +36,7 @@
+ 	AC_MSG_ERROR([No gacutil tool found])
+ fi
+ 
+-GACUTIL_FLAGS='/package gtk-sharp /gacdir $(prefix)/lib /root $(DESTDIR)$(prefix)/lib'
++GACUTIL_FLAGS='/package gtk-sharp-2.0 /gacdir $(prefix)/lib /root $(DESTDIR)$(prefix)/lib'
+                                      
+ AC_SUBST(RUNTIME)
+ AC_SUBST(CSC)
+@@ -56,7 +56,7 @@
+ AC_SUBST(gsf_prefix)
+ 
+ dnl Remember to update this when it changes!
+-GSF_SO_VERSION=113
++GSF_SO_VERSION=114
+ AC_SUBST(GSF_SO_VERSION)
+ 
+ AC_PATH_PROG(GAPI_FIXUP, gapi2-fixup, no)
+diff -aurN gsf-sharp-0.7.orig/gsf-sharp.pc.in gsf-sharp-0.7/gsf-sharp.pc.in
+--- gsf-sharp-0.7.orig/gsf-sharp.pc.in	2005-11-30 19:00:00.000000000 +0100
++++ gsf-sharp-0.7/gsf-sharp.pc.in	2006-06-27 19:58:49.725661416 +0200
+@@ -6,4 +6,4 @@
+ Name: Gsf#
+ Description: Gsf# - libgsf .NET Binding
+ Version: @VERSION@
+-Libs: -r:${libdir}/mono/gtk-sharp/gsf-sharp.dll
++Libs: -r:${libdir}/mono/gtk-sharp-2.0/gsf-sharp.dll
