@@ -25,7 +25,8 @@ BuildRequires:	mono-csharp >= 1.1.13.8
 BuildRequires:	monodoc >= 1.1.13
 BuildRequires:	pkgconfig
 Requires:	mono >= 1.1.13.8
-ExcludeArch:	alpha i386 sparc sparc64
+ExclusiveArch:	%{ix86} %{x8664} arm hppa ia64 ppc s390 s390x
+ExcludeArch:	i386
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
