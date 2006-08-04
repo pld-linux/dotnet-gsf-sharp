@@ -1,5 +1,7 @@
+#
 %include	/usr/lib/rpm/macros.mono
 %define		snap 20051130
+#
 Summary:	Gsf# - libgsf .NET Binding
 Summary(pl):	Gsf# - wi±zanie .NET dla libgsf
 Name:		dotnet-gsf-sharp
@@ -17,7 +19,7 @@ URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dotnet-gtk-sharp2-devel >= 2.8.2
-BuildRequires:	libgsf-gnome-devel >= 1.14.1
+BuildRequires:	libgsf-gnome-devel >= 1.13
 BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.1.13.8
 BuildRequires:	monodoc >= 1.1.13
