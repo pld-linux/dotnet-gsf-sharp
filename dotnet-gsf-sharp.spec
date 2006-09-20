@@ -3,21 +3,22 @@
 Summary:	Gsf# - libgsf .NET Binding
 Summary(pl):	Gsf# - wi±zanie .NET dla libgsf
 Name:		dotnet-gsf-sharp
-Version:	0.7
-Release:	0.%{snap}.8
+Version:	0.8.1
+Release:	1
+#Release:	0.%{snap}.8
 Epoch:		0
 License:	LGPL
 Group:		Libraries
-Source0:	gsf-sharp-%{version}-%{snap}.tar.bz2
-# Source0-md5:	afb75dd835afea2f014d91ae73344fd7
+Source0:	http://primates.ximian.com/~joe/gsf-sharp-%{version}.tar.gz
+# Source0-md5:	92bb68612bdcd8ca3c475b3fee097968
+#Source0:	gsf-sharp-%{version}-%{snap}.tar.bz2
 Patch0:		%{name}-pkgconfig.patch
-Patch1:		%{name}-version_check.patch
-Patch2:		%{name}-sharp20.patch
+Patch1:		%{name}-sharp20.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	dotnet-gtk-sharp2-devel >= 2.8.2
-BuildRequires:	libgsf-gnome-devel >= 1.14.1
+BuildRequires:	dotnet-gtk-sharp2-devel >= 2.10.0
+BuildRequires:	libgsf-devel >= 1.14.1
 BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.1.13.8
 BuildRequires:	monodoc >= 1.1.13
@@ -37,7 +38,7 @@ Summary:	Gsf# development files
 Summary(pl):	Pliki programistyczne Gsf#
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
-Requires:	dotnet-gtk-sharp2-devel >= 2.8.2
+Requires:	dotnet-gtk-sharp2-devel >= 2.10.0
 
 %description devel
 Gsf# development files.
@@ -61,7 +62,6 @@ Biblioteka statyczna Gsf#.
 %setup -q -n gsf-sharp-%{version}
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 %{__libtoolize}
