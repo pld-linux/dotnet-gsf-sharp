@@ -5,13 +5,11 @@ Summary(pl):	Gsf# - wi±zanie .NET dla libgsf
 Name:		dotnet-gsf-sharp
 Version:	0.8.1
 Release:	1
-#Release:	0.%{snap}.8
 Epoch:		0
 License:	LGPL
 Group:		Libraries
 Source0:	http://primates.ximian.com/~joe/gsf-sharp-%{version}.tar.gz
 # Source0-md5:	92bb68612bdcd8ca3c475b3fee097968
-#Source0:	gsf-sharp-%{version}-%{snap}.tar.bz2
 Patch0:		%{name}-pkgconfig.patch
 Patch1:		%{name}-sharp20.patch
 URL:		http://www.gnome.org/
