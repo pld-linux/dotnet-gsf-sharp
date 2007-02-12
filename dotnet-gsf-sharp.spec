@@ -1,7 +1,7 @@
 %include	/usr/lib/rpm/macros.mono
 %define		snap 20051130
 Summary:	Gsf# - libgsf .NET Binding
-Summary(pl.UTF-8):   Gsf# - wiązanie .NET dla libgsf
+Summary(pl.UTF-8):	Gsf# - wiązanie .NET dla libgsf
 Name:		dotnet-gsf-sharp
 Version:	0.8.1
 Release:	1
@@ -33,7 +33,7 @@ Gsf# - wiązanie .NET dla libgsf.
 
 %package devel
 Summary:	Gsf# development files
-Summary(pl.UTF-8):   Pliki programistyczne Gsf#
+Summary(pl.UTF-8):	Pliki programistyczne Gsf#
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	dotnet-gtk-sharp2-devel >= 2.10.0
@@ -46,7 +46,7 @@ Pliki programistyczne Gsf#.
 
 %package static
 Summary:	Gsf# static library
-Summary(pl.UTF-8):   Biblioteka statyczna Gsf#
+Summary(pl.UTF-8):	Biblioteka statyczna Gsf#
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
