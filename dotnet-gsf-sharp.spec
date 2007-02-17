@@ -22,7 +22,7 @@ BuildRequires:	mono-csharp >= 1.1.13.8
 BuildRequires:	monodoc >= 1.1.13
 BuildRequires:	pkgconfig
 Requires:	mono >= 1.1.13.8
-ExcludeArch:	alpha i386 sparc sparc64
+ExcludeArch:	i386
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
