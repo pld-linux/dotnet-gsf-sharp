@@ -6,7 +6,7 @@ Summary:	Gsf# - libgsf .NET Binding
 Summary(pl):	Gsf# - wi±zanie .NET dla libgsf
 Name:		dotnet-gsf-sharp
 Version:	0.7
-Release:	0.%{snap}.8
+Release:	0.%{snap}.9
 Epoch:		0
 License:	LGPL
 Group:		Libraries
@@ -25,7 +25,6 @@ BuildRequires:	mono-csharp >= 1.1.13.8
 BuildRequires:	monodoc >= 1.1.13
 BuildRequires:	pkgconfig
 Requires:	mono >= 1.1.13.8
-ExclusiveArch:	%{ix86} %{x8664} arm hppa ia64 ppc s390 s390x
 ExcludeArch:	i386
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
