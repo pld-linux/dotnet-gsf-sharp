@@ -5,7 +5,6 @@ Summary(pl.UTF-8):	Gsf# - wiązanie .NET dla libgsf
 Name:		dotnet-gsf-sharp
 Version:	0.8.1
 Release:	3
-Epoch:		0
 License:	LGPL
 Group:		Libraries
 Source0:	http://primates.ximian.com/~joe/gsf-sharp-%{version}.tar.gz
