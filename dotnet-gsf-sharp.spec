@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.mono
 %define		snap 20051130
 Summary:	Gsf# - libgsf .NET Binding
 Summary(pl.UTF-8):	Gsf# - wiązanie .NET dla libgsf
